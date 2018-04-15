@@ -11,7 +11,7 @@ class HelperSabotage(HMDevice):
         # init metadata
         self.ATTRIBUTENODE.update({"ERROR": self.ELEMENT})
 
-    def sabotage(self, channel=None):
+    def sabotage(self, channel=0):
         """Returns True if the devicecase has been opened."""
         return bool(self.getAttributeData("ERROR", channel))
 
@@ -24,7 +24,7 @@ class HelperLowBat(HMDevice):
         # init metadata
         self.ATTRIBUTENODE.update({"LOWBAT": self.ELEMENT})
 
-    def low_batt(self, channel=None):
+    def low_batt(self, channel=0):
         """ Returns if the battery is low. """
         return self.getAttributeData("LOWBAT", channel)
 
