@@ -3,7 +3,7 @@ from pyhomematic.devicetypes.generic import HMDevice
 from pyhomematic.devicetypes.sensors import HMSensor
 from pyhomematic.devicetypes.helper import (
     HelperWorking, HelperActorState, HelperActorLevel, HelperActorBlindTilt, HelperActionOnTime,
-    HelperActionPress, HelperEventRemote, HelperWired)
+    HelperActionPress, HelperEventRemote, HelperWired, HelperLowBat)
 
 LOG = logging.getLogger(__name__)
 
@@ -285,7 +285,7 @@ class RFSiren(GenericSwitch, HelperWorking):
         return [1, 2, 3]
 
 
-class KeyMatic(HMActor, HelperActorState):
+class KeyMatic(HMActor, HelperActorState, HelperLowBat):
     """
     Lock, Unlock or Open KeyMatic.
     """
