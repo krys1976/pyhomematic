@@ -34,7 +34,7 @@ class IPShutterContact(HMBinarySensor, HelperBinaryState, HelperLowBat):
         return [1]
 
 
-class ShutterContact(IPShutterContact, HelperSabotage):
+class ShutterContact(IPShutterContact, HelperSabotage, HelperLowBat):
     """Door / Window contact that emits its open/closed state."""
     pass
 
