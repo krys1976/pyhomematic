@@ -144,7 +144,7 @@ class Thermostat(HMThermostat, HelperBatteryState, HelperValveState, HelperLowBa
                                    "CONTROL_MODE": [4]})
 
 
-class ThermostatWall(HMThermostat, AreaThermostat, HelperBatteryState):
+class ThermostatWall(HMThermostat, AreaThermostat, HelperBatteryState, HelperLowBat):
     """
     HM-TC-IT-WM-W-EU
     ClimateControl-Wall Thermostat that measures temperature and allows to set a target temperature or use some automatic mode.
