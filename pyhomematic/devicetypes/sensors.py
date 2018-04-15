@@ -246,7 +246,7 @@ class Motion(HMBinarySensor, HMSensor):
         return int(self.getSensorData("BRIGHTNESS", channel))
 
 
-class MotionV2(Motion, HelperSabotage):
+class MotionV2(Motion, HelperSabotage, HelperLowBat):
     """Motion detection version 2."""
     pass
 
@@ -539,7 +539,7 @@ DEVICETYPES = {
     "HM-Sen-MDIR-SM": Motion,
     "HM-Sen-MDIR-O": Motion,
     "HM-MD": Motion,
-    "HM-Sen-MDIR-O-2": Motion,
+    "HM-Sen-MDIR-O-2": MotionV2,
     "HM-Sec-MDIR-3": MotionV2,
     "HM-Sec-MDIR-2": MotionV2,
     "HM-Sec-MDIR": MotionV2,
