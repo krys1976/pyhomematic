@@ -123,7 +123,7 @@ class ThermostatGroup(HMThermostat):
                                    "CONTROL_MODE": [1]})
 
 
-class Thermostat(HMThermostat, HelperBatteryState, HelperValveState):
+class Thermostat(HMThermostat, HelperBatteryState, HelperValveState, HelperLowBat):
     """
     HM-CC-RT-DN, HM-CC-RT-DN-BoM
     ClimateControl-Radiator Thermostat that measures temperature and allows to set a target temperature or use some automatic mode.
