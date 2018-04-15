@@ -58,6 +58,8 @@ class Remote(HMEvent, HelperEventRemote, HelperActionPress):
             return [1, 2, 3, 4, 5, 6, 7, 8]
         return [1]
 
+class RemoteBattery(Remote, HelperLowBat):
+    pass
 
 class RemotePress(HMEvent, HelperEventPress, HelperActionPress):
     """Remote handle buttons."""
@@ -95,16 +97,16 @@ DEVICETYPES = {
     "HM-RC-SB-X": Remote,
     "HM-RC-X": Remote,
     "HM-PB-2-FM": Remote,
-    "HM-PB-2-WM": Remote,
+    "HM-PB-2-WM": RemoteBattery,
     "BC-PB-2-WM": RemotePress,
-    "HM-PB-4-WM": Remote,
-    "HM-PB-6-WM55": Remote,
-    "HM-PB-2-WM55-2": Remote,
-    "HM-PB-2-WM55": Remote,
+    "HM-PB-4-WM": RemoteBattery,
+    "HM-PB-6-WM55": RemoteBattery,
+    "HM-PB-2-WM55-2": RemoteBattery,
+    "HM-PB-2-WM55": RemoteBattery,
     "HM-PBI-4-FM": Remote,
     "HM-PBI-X": Remote,
-    "HM-Dis-WM55": Remote,
-    "HM-Dis-EP-WM55": Remote,
+    "HM-Dis-WM55": RemoteBattery,
+    "HM-Dis-EP-WM55": RemoteBattery,
     "HM-MOD-EM-8": Remote,
     "RC-H": Remote,
     "BRC-H": Remote,
@@ -115,8 +117,8 @@ DEVICETYPES = {
     "263 145": Remote,
     "263 135": Remote,
     "HM-OU-LED16": Remote,
-    "HM-PB-4Dis-WM": Remote,
-    "HM-PB-4Dis-WM-2": Remote,
+    "HM-PB-4Dis-WM": RemoteBattery,
+    "HM-PB-4Dis-WM-2": RemoteBattery,
     "HMW-IO-4-FM": Remote,
     "HMW-IO-12-FM": Remote,
     "HMIP-WRC2": Remote,
